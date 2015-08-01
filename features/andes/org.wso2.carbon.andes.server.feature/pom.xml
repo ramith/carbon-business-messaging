@@ -120,6 +120,16 @@
             <groupId>org.apache.axis2.transport</groupId>
             <artifactId>axis2-transport-rabbitmq-amqp</artifactId>
         </dependency>
+			  <dependency>
+        		<groupId>com.zaxxer</groupId>
+        		<artifactId>HikariCP-java6</artifactId>
+    		</dependency>
+				<dependency>
+						<groupId>org.javassist</groupId>
+						<artifactId>javassist</artifactId>
+						<version>3.20.0-GA</version>
+				</dependency>
+
     </dependencies>
 
     <build>
@@ -242,6 +252,9 @@
                                 <bundleDef>libthrift.wso2:libthrift</bundleDef>
                                 <bundleDef>org.apache.axis2.transport:axis2-transport-jms:${axis2.transport.jms.version}</bundleDef>
                                 <bundleDef>org.apache.axis2.transport:axis2-transport-rabbitmq-amqp:${axis2.transport.rabbitmq.amqp.version}</bundleDef>
+                                <bundleDef>org.javassist:javassist:3.20.0-GA</bundleDef>
+          											<bundleDef>com.zaxxer:HikariCP-java6:2.3.9</bundleDef>
+
                             </bundles>
                             <importFeatures>
                                 <importFeatureDef>org.wso2.carbon.core.server:${carbon.kernel.version}
