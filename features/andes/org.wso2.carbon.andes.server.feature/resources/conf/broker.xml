@@ -146,6 +146,7 @@ This file is ciphertool compliant. Refer PRODUCT_HOME/repository/conf/security/c
 
         <messageStore class="org.wso2.andes.store.hikari.HikariBackedRDBMSMessageStoreImpl">
             <property name="dataSource">WSO2MBStoreDB</property>
+            <property name="configFileName">hikari.properties</property>
             <property name="storeUnavailableSQLStateClasses">08</property>
             <property name="integrityViolationSQLStateClasses">23,27,44</property>
             <property name="dataErrorSQLStateClasses">21,22</property>
@@ -162,6 +163,20 @@ This file is ciphertool compliant. Refer PRODUCT_HOME/repository/conf/security/c
             <property name="transactionRollbackSQLStateClasses">40</property>
         </messageStore>
         -->
+
+
+        <!-- Hikari backed RDBMS MB Context Configuration -->
+        <contextStore class="org.wso2.andes.store.hikari.HikariBackedRDBMSAndesContextStoreImpl">
+            <property name="dataSource">WSO2MBStoreDB</property>
+            <property name="configFileName">hikari.properties</property>
+            <property name="storeUnavailableSQLStateClasses">08</property>
+            <property name="integrityViolationSQLStateClasses">23,27,44</property>
+            <property name="dataErrorSQLStateClasses">21,22</property>
+            <property name="transactionRollbackSQLStateClasses">40</property>
+        </contextStore>
+
+
+        <!--
         <contextStore class="org.wso2.andes.store.rdbms.RDBMSAndesContextStoreImpl">
             <property name="dataSource">WSO2MBStoreDB</property>
             <property name="storeUnavailableSQLStateClasses">08</property>
@@ -169,7 +184,7 @@ This file is ciphertool compliant. Refer PRODUCT_HOME/repository/conf/security/c
             <property name="dataErrorSQLStateClasses">21,22</property>
             <property name="transactionRollbackSQLStateClasses">40</property>
         </contextStore>
-
+				-->
 
         <!-- H2 Based In-Memory Store Configuration -->
 <!--
